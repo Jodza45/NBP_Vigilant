@@ -1,0 +1,889 @@
+PAGES: 58
+
+--- PAGE 1 ---
+0
+Napredne
+ ba
+ze podataka
+Gra
+f
+ baze
+ podataka
+Ra
+čunarstvo i informatika
+Katedra za računarstvo
+Elektronski fakultet u Nišu
+Zimski semestar 2025/2026
+
+--- PAGE 2 ---
+0
+Sad
+ržaj
+ Graf baze podataka
+ Model podataka
+ Neo4J
+ Neo4J model podataka
+ Neo4J Cypher
+ Neo4J Indeksi
+ Neo4J performance
+ Neo4J use-case
+ Neo4J Graph Data Science
+ Neo4J klister
+ Neo4J Fabric
+Napredne baze podataka 2
+
+--- PAGE 3 ---
+0
+Graf baze podataka
+ Količina podataka dostupona na
+Internetu postaje sve veća.
+ Svaka dva dana kreira se količina
+informacija koja je bila dostupna
+na Internet-u do 2003. godine.
+ Sve veća povezanost
+podataka:
+◦ T ext (sadržaj)
+◦ HyperT ext (pokazivači)
+◦ RSS (grupisanje pokazivača)
+◦ Blogs (dodat pingback)
+◦ Tagging (grupisanje sličnih podataka)
+◦ RDF (opis povezanih podataka)
+◦ GGG (sadržaj + pokazivači + veze +
+opis)
+Napredne baze podataka 3
+
+
+--- PAGE 4 ---
+0
+Graf baze podataka
+ Bitna karakteristika podataka na Internetu je da su
+polustruktuirani ili nestrukturiani.
+ Primer: Model podataka koji prikazuje podatke o filmovima:
+Glumci, Uloge, Lokacije, Datumi, Filmovi, Reditelji, Producenti,
+Ocene, Prikazivanja i sl.
+ Kod ovog modela broj veza između entiteta može drastično
+da varira.
+ Svaki entitet može da ima proizvoljan broj veza ka drugim
+entitetima.
+ Kompleksna i neregularna struktura.
+ Relaciona baza podataka nije pogodna za predstavljanje ovakvih
+modela podataka.
+Napredne baze podataka 4
+
+--- PAGE 5 ---
+0
+Graf baza podataka
+ Graf baze podataka koriste strukturu podataka tipa GRAF
+(čvorovi,potezi i svojstva) za reprezentaciju i skladištenje podataka.
+ Po definiciji, graf baza podataka je bilo koji sistem za
+skladištenje podataka koji omogućava definisanje relacija
+nezavisno od indeksnih i lookup struktura.
+ To znači da svaki element može da sadrži direktan pokazivač
+ka drugim elementima bez potrebe za postojanje indeksnih
+struktura.
+ Pored generalnih graf baza podataka, koje mogu da se koriste za
+skladištenje bilo kog grafa, postoje i specijalizovane graf baze
+podataka:
+◦ Triplestore (skladištenej podataka u obliku subjekat-predikat-objekat, RDF)
+◦ Mrežne baze podataka (baziraju se na korišćenju mrežnog modela)
+Napredne baze podataka 5
+
+--- PAGE 6 ---
+0
+Graf baze podataka
+Napredne baze podataka 6
+• Graf baza podataka koristi
+strukturu tipa graf.
+• Elementi: čvorovi, potezi i
+svojstva.
+• Koncept čvorova je sličan
+konceptu objekta u OO
+programiranju.
+• Čvorovi se koriste za
+reprezentaciju entiteta.
+• Svojstva su podaci koji opisuju
+čvorove.
+• Potezi su relacije koje
+povezuju čvorove međusobno ili
+čvorove sa svojstvima.
+• Svojstva mogu biti pridružena i
+potezima.
+
+--- PAGE 7 ---
+0
+Graf baze podataka
+ Najednostavnija graf baza podataka sadrži
+samo jedan čvor.
+ Čvor može imati neograničeni broj
+svojstava.
+ Veze između čvorova organizuju graf u
+različite strukture (lista, mapa, stablo) koje
+mogu biti povezane u još kompleksnije
+strukture.
+ Za pretragu grafa koriste se različiti
+algoritmi.
+ Da bi se ubrzao pristup i pretraga čvorova
+mogu se indeksirati pojedina svojstva.
+Napredne baze podataka 7
+
+
+--- PAGE 8 ---
+0
+Graf baze podataka
+ Graf baze podataka su pogodnije rešenje za asocijativne skupove
+podataka.
+ Podaci iz graf baza podataka se direktno mapiraju na OO model.
+ Dobro rešenje za velike količine podataka pošto ne zahtevaju
+skupe operacije spoja.
+ Zahvaljujući fleksibilnoj šemi pogodne za razvoj ad-hoc aplikacija
+ili aplikacija koje brzo evaluiraju.
+ Pogodne za operacije tipa: obilazak grafa, traženje najkraćeg
+puta između dva čvora, provera da li postoji put između
+dva čvora, detektovanje paterna, određivanje suseda i sl.
+Napredne baze podataka 8
+
+--- PAGE 9 ---
+0
+Graf 
+baze
+ 
+podataka
+ Poređenje sa relacionim bazama podataka
+Napredne baze podataka 9
+Relacione baze podataka su 
+optimizovane za agregaciju 
+podataka
+Graf baze podataka su 
+optimizovane za veze između 
+podataka
+
+--- PAGE 10 ---
+0
+G
+r
+af baze podataka
+ Poređenje sa key-value skladištima podataka
+Napredne baze podataka 10
+Key-value skladišta 
+podataka su optimizovana 
+za jednostavne lookup 
+pretrage
+Graf baze podataka su optimizovane 
+za obilaske povezanih podataka
+
+
+--- PAGE 11 ---
+0
+G
+r
+af baze podataka
+ Poređenje sa key-value skladištima podataka
+Napredne baze podataka 11
+Key-value skladišta podataka 
+su optimizovana za 
+organizaciju podataka u 
+strukture stabla
+Graf baze podataka omogućavaju 
+organizaciju podataka u različite 
+kompleksne strukture povezanih 
+podataka
+
+
+--- PAGE 12 ---
+0
+Graf baze podataka
+ Property graf baze podataka:
+◦ Neo4j
+◦ JanusGraph
+◦ TigerGraph
+◦ ArangoDB
+ RDF / SPARQL graf baze:
+◦ Apache Jena
+◦ Virtuoso
+◦ GraphDB
+◦ Blazegraph
+Napredne baze podataka 12
+
+--- PAGE 13 ---
+0
+Model 
+podataka
+ Dva dominantna modela:
+◦ Graf svojstava (Property graph)
+◦ RDF + SPARQL
+ Property graph
+◦ Implementacije: NEo4J, TigerGraph, JanusGraph
+◦ Struktura
+ Čvorovi (nodes)
+ Relacije (relationships)
+ Svojstva (key-value) i kod čvorova i kod relacija
+ Relacije imaju tip i smer
+◦ Ne postoji standardizovano rešenje. Jedno od rešenja je Cypher 
+upitni jezik.
+Napredne baze podataka 13
+
+--- PAGE 14 ---
+0
+Model podataka
+ Primer grafa svojstava
+Napredne baze podataka 14
+
+
+--- PAGE 15 ---
+0
+Model podataka
+ RDF + SPARQL
+◦ Standardi: W3C
+◦ Implementacije:  Virtuoso, Blazegraph, GraphDB
+◦ Struktura:
+ Sve su tripleti: subjekat, objekat, predikat
+ Nema pravih svojstava, sve se modelira relacijama
+ Semantički strogo definisani (URI, ontologije)
+◦ Upitni jezik: SPARQL
+Napredne baze podataka 15
+
+--- PAGE 16 ---
+0
+Model podataka
+Napredne baze podataka 16
+ Primer RDF + SPARQL grafa
+
+
+--- PAGE 17 ---
+0
+Model podataka
+ Upitni jezici
+◦ Cypher (property graph)
+ Deklarativan
+ Vizuelno prati strukturu grafa
+ Fokus: obilazak grafa i pattern matching
+ Lak za učenje 
+ Dobar za poslovne upite
+ Nije standardizovan
+Napredne baze podataka 17
+
+
+--- PAGE 18 ---
+0
+Model podataka
+◦ SPARQL
+ Standardizovan (W3C standard)
+ Baziran na graf šablonima nad tripletima
+ Fokus: semantička interoperabilnost
+ Ontologije i zaključivanje
+ Kompleksan imanje intuitivan
+Napredne baze podataka 18
+
+
+--- PAGE 19 ---
+0
+Model podataka
+ Property graph
+◦ Efikasne operacije obilaska grafa
+◦ Podrška za duboki graf upite
+◦ Nema podrške za onoologije
+◦ Nema podrške za zaključivanje 
+(inferencing)
+◦ Ne postoji standard
+◦ Optimizovani za operativne upite
+ RDF + SPARQL
+◦ Skuplje operacije obilaska grafa
+◦ Duboki graf upiti su skuplji u RDF 
+sistemima u poređenju sa 
+property graph bazama.
+◦ Podrška za ontologije
+◦ Podrška za zaključivanje 
+(inferencing)
+◦ W3C standard
+◦ Sistemi za predstavljanje znanja
+Napredne baze podataka 19
+
+--- PAGE 20 ---
+0
+Model podataka
+ Tipični slučajevi korišćenja
+◦ Property Graph
+ Fraud detection
+ Recommendation systems
+ Identity & Access Management
+ Network & dependency analysis
+ Real-time aplikacije
+ Fokus: kako su entiteti povezani
+◦ RDF / SPARQL
+ Knowledge graphs
+ Semantic Web
+ Linked Open Data
+ Integracija heterogenih izvora
+ Naučni sistemi
+ Fokus: šta entiteti znače
+◦ Mogu se kombinovati: RDF model se ulčitava kao projekcija u 
+Property Graph model.
+Napredne baze podataka 20
+
+--- PAGE 21 ---
+0
+Neo4J
+ Creator: Swedish media asset project, today Neo4J Inc.
+ Initial release: 2006-2007 open source project, 2010 Neo4J 
+server
+ Stable release: 5.x je aktuelna verzija (novije verzije nisu 
+kompatibilne sa prethodnim 4.x verzijama)
+ Proggramming language: Java
+ Operating system: Cross-platform
+ T ype : Graph database (embedded, server)
+ License: dual licensing (open source + commercial)
+ Website: http://neo4j.com/
+Napredne baze podataka 21
+
+--- PAGE 22 ---
+0
+Neo4J
+ Graf baza podataka
+ Property graf
+ Full ACID (atomicity, consistency, isolation, durability) – garantuje
+konzistentnost podataka za sve operacije koje se izvršavaju
+unutar transakcija.
+ Brze pretraga podataka zahvaljujući algoritimima za obilazak grafa
+ Embedded rešenje u Java aplikacijama
+ Server rešenje
+ Neo4J AuraDB – cloud graph database service
+ Originalno REST API (danas je depricated)
+ Danas BOLT protokol
+ Zvanični drajveri (Java, Python, JS, .NET)
+ Neo4J – poptuna ACID podrška na nivou jedne baze podataka
+Napredne baze podataka 22
+
+--- PAGE 23 ---
+0
+Neo4J model podataka
+ Osnovne jedinice Neo4J grafa su čvorovi i potezi (relacije). 
+ Neo4J dozvoljava da i čvorovi i potezi poseduju svojstva.
+ Čvorovi se najčešće koriste za predstavljanje entiteta, ali zavisno od 
+domena primene mogu imati i drugačiju ulogu.
+ Najednostavniji graf sadrži samo jedan čvor.
+Napredne baze podataka 23
+
+
+--- PAGE 24 ---
+0
+Neo4J model podataka
+ Relacije između čvorova predstavljaju ključni element grafa.
+ Omogućavaju pronalaženje povezanih podataka.
+ Relacija povezuje dva čvora i garantovano poseduje validne
+polazni i validni krajnji čvor.
+Napredne baze podataka 24
+
+
+--- PAGE 25 ---
+0
+Neo4J model podataka
+ Relacije su uvek usmerene tako da se razlikuju dolazni i odlazni
+potezi.
+ Relacija se uvek može obići bez obzira na smer. Prilikom
+obilaska grafa najčešće se ignorišu relacije čiji smer ne odgovara
+potrebama.
+ Svakoj relaciji je dodeljen tip odnosno labela.
+Napredne baze podataka 25
+
+
+--- PAGE 26 ---
+0
+Neo4J model podataka
+Napredne baze podataka 26
+Model jednostavne 
+društvene mreže
+Model fajl sistema
+
+--- PAGE 27 ---
+0
+Neo4J model podataka
+ Svojstva predstavljaju key-value parove.
+ Vrednosti svojstava mogu bit atomične vrednosti ili nizovi 
+atomičnih vrednosti.
+ U tabeli je dat spisak podržanih tipova podataka.
+Napredne baze podataka 27
+
+
+--- PAGE 28 ---
+0
+Neo4J model podataka
+ Putanja (path) predstavlja kolekciju (najmanje jedan) 
+čvorova koji su međusobno povezani relacijama.
+ Putanja se dobija kao rezultat upita odnosno rezultat obilaska 
+grafa.
+ Obilazak grafa podrazumeva obilazak čvorova praćenjem 
+veza između čvorova a na osnovu zadatog pravila.
+Napredne baze podataka 28
+
+--- PAGE 29 ---
+0
+Neo4J 
+Cypher
+ Cypher – deklarativni upitni jezik za NEo4J bazu podataka
+ Osnovna ideja je čitljivost i jednostavnost
+ Fokus je na property graph strukturama
+ Omogućava CRUD operacije nad Neo4J grafovima
+ Upiti opisuju šablone u grafu (graph patterns)
+ Izgrađen je na elementima SQL-a (WHERE i ORDER BY)i 
+SPARQL-a (pattern matching).
+ Namenjen je za kreriranje ad-hoc upita korišćenjem različitih alata 
+ali i za zadavanje upita korišćenjem REST API-ja, BOLT protokola ili 
+neke klijentske biblioteke.
+Napredne baze podataka 29
+
+--- PAGE 30 ---
+0
+Neo4J 
+Cypher
+ Elementi Cypher jezika:
+◦ MATCH – definiše graf šablon koji se pretražuje, pri čemu se početne tačke pronalaze 
+putem labela i indeksa
+◦ OPTIONAL MATCH – funkcioniše kao levi spoljašnji spoj i vraća NULL vrednosti 
+ako traženi obrazac ne postoji
+◦ WHERE – kriterijum za filtriranje pronađenih pattern-a
+◦ RETURN – koje podatke treba vratiti
+◦ MERGE – pronalazi zadati obrazac ili ga kreira po potrebi čime izbegava pojavu 
+duplikata
+◦ UNWIND – transformiše listu vrednosti u pojedinačne redove kako bi se nad njima 
+mogle izvršavati graf operacije
+◦ CREATE – kreiranje čvorova i potega
+◦ DELETE – brisanje čvorova i potega
+◦ SET – definisanje vrednosti svojstava
+◦ FOREACH – ažuriranje elemenata u listi
+◦ WITH – podela upita na veći broj nezavisnih delova
+◦ CALL – omogućava izvršavanje nezavisnih podupita unutar glavnog upita
+◦ PROFILE / EXPLAIN – EXPLAIN prikazuje plan izvršavanja upita, dok PROFILE 
+prikazuje stvarne performanse i broj obrađenih elemenata tokom izvršavanja
+Napredne baze podataka 30
+
+--- PAGE 31 ---
+0
+Neo4J 
+Cypher
+ Zadavanje graf pattern-a
+ Cypher koristi ASCII-art–like 
+šablone.
+◦ ( ) - čvor
+◦ [ ] - relacija
+◦ : - label ili tip relacije
+◦ → / ← - smer relacije
+Napredne baze podataka 31
+
+
+--- PAGE 32 ---
+0
+Neo4J 
+Cypher
+ Movies baza podataka
+Napredne baze podataka 32
+
+
+--- PAGE 33 ---
+0
+Neo4J 
+Cypher
+Napredne baze podataka 33
+Jednostavan upit koji vraća informacije o 
+korisnicima koji su ocenili filmove
+WHERE filtrira samo korisnike koji su dali 
+ocenu veću od 4
+Dodavanje podataka u bazu podataka
+Različite labele za čvor.
+
+--- PAGE 34 ---
+0
+Neo4J 
+Cypher
+Napredne baze podataka 34
+Zadaje se željena dužina 
+putanje. U ovom slučaju dužina 
+putanje je promenljiva (1, 2 ili 3)
+Sortiranje i agregacija.
+Filmovi u kojima je glumio 
+određeni glumac.
+Glumci koji glume u određenom 
+filmu.
+Osobe koje su glumile u filmu 
+koji su i režirale.
+
+--- PAGE 35 ---
+0
+Neo4J 
+Cypher
+Napredne baze podataka 35
+Pronalazi zadati čvor/relaciju ili 
+ga kreira ukoliko ne postoji. 
+Funkcioniše kao SQL INSERT 
+IF NOT EXISTS
+OPTIONAL MATCH funkcioniše 
+kao SQL LEFT JOIN
+
+--- PAGE 36 ---
+0
+Neo4J
+ indeksi
+ Neo4J podržava dva tipa indeksa:
+◦ Schema indeksi 
+ indeksiraju se numeričke ili string vrednosti (sva svojstva mogu da se indeksiraju 
+kao string vrednosti)
+ koriste se za lookup pretragu grafa u cilju pronalaženja čvorova i relacija na koje će
+se primeniti grafovske operacije.
+ za implementaciju se koristi B+ stablo
+◦ Full-text indeksi
+ indeksiraju se sve reči u tekstualnom podatku
+ za implementaciju se koristi Lucene biblioteka (invertovani indeks)
+ Indeksi se kreiraju i automatski se koriste od strane planera.
+ Preporuke:
+◦ Indeksirati identifikatore
+◦ Indeksirati svojstva koja se često javljaju u WHERE klauzuli
+◦ Uvek koristiti PROFILE ili EXPLAIN za proveru
+◦ Nemaju uticaj kod obilaska grafa
+◦ Nemaju uticaj na duboke graf algoritme
+◦ Ne mogu da zamene dobro projektovan model podataka
+Napredne baze podataka 36
+
+--- PAGE 37 ---
+0
+Neo4J indeksi
+Napredne baze podataka 37
+Najčešći tip indeksa gde se 
+indeksira jedno ili više 
+svojstava čvorova ili relacija 
+(ređe).
+Full-text indeks se koristi za 
+brzu pretragu tekstualnih 
+podataka. .
+
+--- PAGE 38 ---
+0
+Neo4J indeksi
+Napredne baze podataka 38
+Indeks se koristi da se brzo 
+identifikuje polazni čvor ali se 
+ne koristi kasnije za obilazak 
+grafa.
+Efekte dodatog indeksa treba 
+proveriti korišćenjem EXPLAIN 
+ili PROFILE naredbe. U planu 
+izvršenja treba da se pojavi 
+NodeIndexSeek operacija.
+UNIQUE ograničenje koje 
+podrazumeva automatsko 
+kreiranje indeksa. Preporučuje 
+se za sve identifikatore.
+
+--- PAGE 39 ---
+0
+Neo4J performanse
+ Dobre strane Neo4J baze podataka
+◦ Optimizovan za duboke i široke obilaske grafova
+ MATCH (a)-[:REL*1..N]->(b) operacije su izuzetno brze
+ Obilazak dubine pet se izvršava u nekoliko milisekundi
+ Direktno pokazivači, nema spojeva, pristup susedima O(1)
+◦ Read-optimized baza OLTP baza podataka
+ Optimizovan za veliki broj čitanja podataka: društvene mreže, detekcija 
+prevara, generisanje preporuka
+◦ Page Cache (kritična komponenta)
+ Neo4j drži graf strukturu u page cache-u (u memoriji)
+ Ako graf stane u RAM → performanse bliske in-memory sistemima 
+◦ CSR-like in-memory projekcije
+ Nema zaključavanja
+ Masivna paralelizacija
+Napredne baze podataka 39
+
+--- PAGE 40 ---
+0
+Neo4J performanse
+ Loše strane Neo4J baze podataka
+◦ Agregacije nad velikim skupovima podataka
+ Neo4j nije zamena za OLAP
+ Funkcije agregacije imaju lošije performance nego kod OLAP baza podataka
+◦ Write contention
+ Česta insert/delete operacija
+ Više paralelnih transakcija koje menjaju isti deo grafa → lock contention
+ Streaming ingest (100k+ events/s)
+ Razlog: ACID transakcije, održavanje indeksa, WAL logovi
+◦ Nepostojanje COST base optimizacije upita
+ Neo4J planer upita je dobar ali zaostaje za planerima upita kod relacionih 
+DBMS-ova
+Napredne baze podataka 40
+
+--- PAGE 41 ---
+0
+Neo4J performanse
+ Compressed Sparse Row (CSR)
+ CSR je memorijska struktura za efikasno skladištenje i 
+obradu velikih, retkih grafova / matrica.
+ Osnovna ideja: čuvaju se samo postojeće veze (non-zero 
+elementi), bez praznih mesta
+Napredne baze podataka
+41
+
+
+--- PAGE 42 ---
+0
+Neo4J performanse
+ CSR je optimizovan za operacije čitanja.
+ Neam transakcione konkurencije.
+ Nema zaključavanja.
+ Dobar za batch analitiku
+ Loše strane:
+◦ Ne podržava dinamičke izmene
+◦ Skupo dodavanje/brisanje grana
+◦ Potrebna velika RAM memorija
+ Operacije obilaska grafa koriste projekciju graf baze 
+podataka u CSR strukture u memoriji. 
+ Zahvaljujući CSR strukturama, obilazak grafa je izuzetno 
+brza operacija
+Napredne baze podataka 42
+
+--- PAGE 43 ---
+0
+Neo4J use
+-
+case
+ Otkrivanje prevara (Fraud detection)
+ Šabloni (patterns) koji se traže u grafu:
+◦ više korisnika koriti isti uređaj
+◦ isti račun povezuje više identiteta
+◦ pranje novca (circular money flow) 
+Napredne baze podataka 43
+Model grafa
+Nalozi koji dele isti uređaj
+Kratak ciklus transakcija (circular money flow)
+
+--- PAGE 44 ---
+0
+Neo4J use
+-
+case
+ Sistem za davanje preporuka (Recommendation system)
+ Šabloni (patterns) koji se traže u grafu za preporuku 
+proizvoda/filmova:
+◦ zajednička interesovanja
+◦ sličnost korisnika
+◦ zajedničke veze (collaborative filtering)
+Napredne baze podataka 44
+Model grafa
+Collaborative filtering
+Preporuke na osnovu prijatelja
+
+--- PAGE 45 ---
+0
+Neo4J 
+use
+-
+case
+ Identity & Access Management (IAM)
+ Šabloni (patterns) koji se traže u grafu za analizu prava 
+pristupa:
+◦ korisnici
+◦ uloge
+◦ prava pristupa
+◦ nasleđivanje prava
+Napredne baze podataka 45
+Model grafa
+RBAC sa hijerarhijom
+Sve privilegije korisnika 
+uključujući i nasleđene
+Separation of Duties (SoD)
+Detekcije konflikta privilegija
+
+--- PAGE 46 ---
+0
+Neo4J Graph Data Science
+ Graph Data Science (GDS) je skup metoda i algoritama 
+koji koriste strukturu grafa (čvorove i relacije) kako bi:
+◦ otkrili obrasce
+◦ rangirali entitete
+◦ detektovali zajednice
+◦ izračunali sličnosti
+◦ pripremili podatke za ML modele
+ GDS algoritmi ne rade direktno nad bazom, već nad:
+◦ projekcijom grafa u memoriji koja optimizovanom za algoritme
+◦ koriste se CSR structure
+◦ Velika brzina
+◦ Nema konkuretnog zaključavanja
+◦ ZAHTEVA DOSTA MEMORIJE
+Napredne baze podataka 46
+
+--- PAGE 47 ---
+0
+Neo4J Graph Data Science
+ Centrality algoritmi – PageRank
+ Use case: identifikacija važnih čvorova - influenseri, 
+ključni sistemi važni računi
+ Broj veza ne definiše direktno PageRank score, zato što 
+algoritam uzima u obzir i kvalitet suseda
+Napredne baze podataka 47
+
+
+--- PAGE 48 ---
+0
+Neo4J Graph Data Science
+ Community Detection – Louvain
+ Use-case: detekcija zajednica, društvene mreže, fraud 
+ring (organizovane prevare), tematske grupe
+Napredne baze podataka 48
+
+
+--- PAGE 49 ---
+0
+Neo4J Graph Data Science
+ Path Finding algoritmi - Shortest Path (Dijkstra)
+ Use-case: logistika, mreže, preporuke
+Napredne baze podataka 49
+
+
+--- PAGE 50 ---
+0
+Neo4J Graph Data Science
+ Similarity algoritmi - Node Similarity
+ Use-case: preporuke, slični korisnici/proizvodi
+ Radi po principu sličnih suseda
+Napredne baze podataka 50
+
+
+--- PAGE 51 ---
+0
+Neo4J Graph Data Science
+ GDS se koristi za feature engineering nad grafom
+ Rezultati GDS algoritama postaju svojstva:
+◦ PageRank score
+◦ Community ID
+◦ Degree
+◦ Similarity score
+ Modifikovani podaci se koriste kao ulaz za algoritme 
+mašinskog učenja.
+Napredne baze podataka 51
+
+--- PAGE 52 ---
+0
+Neo4J klaster
+ Neo4j klaster je distribuirana konfiguracija namenjena:
+◦ visokoj dostupnosti (HA)
+◦ skaliranju čitanja
+◦ otpornosti na pad čvorova
+ Klaster ne shard-uje podatke — svi čvorovi imaju istu kopiju 
+grafa.
+ Causal clustering arhitektura:
+◦ Core čvorovi
+ Leader i Followers
+ Učestvuju u kvorumu
+ Minimum 3 core čvora (1 Leader i 2 Follower-a)
+ Samo Leader prihvata write transakcije
+◦ Read replica čvorovi
+ Ne učestvuju u kvorumu
+ Kopija baze samo za čitanje
+ Horizontalno skaliranje read operacije
+Napredne baze podataka 52
+
+--- PAGE 53 ---
+0
+Neo4 klaster
+ WRITE operacija:
+1.  Klijent šalje write na 
+Leader
+2. Leader zapisuje transakciju 
+(WAL)
+3. Transakcija se replicira na 
+većinu core node-ova
+4. Nakon kvoruma → 
+transakcija je commit-ovana
+5. Jaka konzistentnost (CP 
+sistem)
+ READ operacija:
+1. Read može ići:
+1. na Leader
+2. na Follower
+3. na Read Replica
+2. Read Replicas: mogu biti 
+eventualno konzistentne
+ Failower i izbor leader-a
+◦ Ako Leader padne: core node-ovi 
+biraju novog Leader-a
+◦ Aplikacija se automatski 
+reconnect-uje
+◦ Failover je transparentan za 
+klijenta
+Napredne baze podataka 53
+
+--- PAGE 54 ---
+0
+Neo4J klaster
+ Neo4J klaster rešava
+◦ Single point of failure
+◦ Read skaliranje
+◦ Visoku dostupnost
+Napredne baze podataka 54
+ Neo4J klaster ne 
+rešava
+◦ Horizontalno skaliranje 
+podataka
+◦ Distribuirani obilazak 
+grafa
+◦ OLAP workload
+
+--- PAGE 55 ---
+0
+Neo4J Fabric
+ Neo4j Fabric je mehanizam za rad sa više baza podataka 
+kao jedinstvenim grafom, koji omogućava:
+◦ federativne (cross-database) Cypher upite
+◦ logičku podelu grafa (po domenu, tenant-u, regionu)
+◦ kontrolu pristupa po bazi
+ Fabric nije automatski sharding niti pravi distribuirani 
+graf u klasičnom smislu.
+ Implementiran u Neo4j Enterprise izdanju.
+ Razlike između Neo4J klister I Neo4J Fabric:
+◦ Cluster = HA + read scale
+◦ Fabric = federacija baza
+◦ Nema sharding-a ni u jednom rešenju
+Napredne baze podataka 55
+
+--- PAGE 56 ---
+0
+Neo4J Fabric
+ Problemi koje Fabric rešava:
+◦ Jedna ogromna baza - kompleksnost, bezbednost, održavanje
+◦ Multi-tenant sistemi (SaaS)
+◦ Razdvajanje domena (IAM, transakcije, recommendation)
+◦ Različiti SLA zahtevi po delu grafa
+ Fabric omogućava:
+◦ više nezavisnih baza
+◦ jedinstveni Cypher sloj iznad njih
+ Ključne komponente
+◦ Fabric database (koordinator)
+◦ Remote databases (lokalne ili udaljene)
+ Fabric database
+◦ ne skladišti podatke
+◦ parsira upit
+◦ delegira upit remote bazama podataka
+◦ Kombinuje rezultate upita 
+Napredne baze podataka 56
+
+--- PAGE 57 ---
+0
+Neo4J fabric
+ Dobre strane:
+◦ Federisani lookup upiti
+◦ Agregacije rezultata iz više baza
+◦ Administrativni i analitički upiti
+ Loše strane:
+◦ Nije automatski sharding
+◦ Nema distribuiranog obilaska između više baza podataka
+◦ Obilazak grafa se završava na granici baze podataka
+◦ Nema globalni ACID
+◦ Velika latencija upita zbog mrežne komunikacije, serijalizacije 
+rezultata, nepostojanja globalnih CSR struktura
+Napredne baze podataka 57
+
+--- PAGE 58 ---
+0
+Neo4J Fabric
+ WITH između USE klauzula
+ Definišu se podaci koji se strimuju i razmenjuju između 
+baza
+ Nema automatskog prelaza
+Napredne baze podataka 58
+
